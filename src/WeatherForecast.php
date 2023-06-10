@@ -6,4 +6,8 @@ class WeatherForecast {
   public static function getLocation() {
     return 'get location';
   }
+
+  public function insertIplocationTable() {
+    
+  }
 }
