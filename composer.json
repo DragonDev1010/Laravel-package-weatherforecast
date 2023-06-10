@@ -5,6 +5,16 @@
             "Great\\Weatherforecast\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Great\\Weatherforecast\\Providers\\WeatherForecastServiceProvider"
+            ],
+            "aliases": {
+              "WeatherForecast": "Great\\Weatherforecast\\Facades\\WeatherForecastFacade"
+            }
+        }
+    },
     "authors": [
         {
             "name": "DragonDev1010",
