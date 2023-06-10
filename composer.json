@@ -1,0 +1,15 @@
+{
+    "name": "great/weatherforecast",
+    "autoload": {
+        "psr-4": {
+            "Great\\Weatherforecast\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DragonDev1010",
+            "email": "provic0099@gmail.com"
+        }
+    ],
+    "require": {}
+}
