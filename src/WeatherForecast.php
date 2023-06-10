@@ -8,7 +8,7 @@ class WeatherForecast {
     return 'get location';
   }
 
-  public function insertIplocationTable() {
+  public static function insertIplocationTable() {
     $new_iplocation = new Iplocation;
     $new_iplocation->ipaddress = '192.168.1.1';
     $new_iplocation->latitude = 123.5;
