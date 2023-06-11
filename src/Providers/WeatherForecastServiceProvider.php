@@ -21,6 +21,10 @@ class WeatherForecastServiceProvider extends ServiceProvider
       $this->publishes([
           __DIR__ . '/../database/migrations/create_iplocation_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_iplocation_table.php'),
       ], 'iplocation-migrations');
+
+      $this->publishes([
+          __DIR__.'/../config/weatherForecast.php' => config_path('weatherForecast.php'),
+      ], 'weatherforecast-config');
   }
 
 }
