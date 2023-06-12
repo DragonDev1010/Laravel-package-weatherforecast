@@ -26,11 +26,11 @@ class WeatherForecast {
     return [$latitude, $longitude];
   }
 
-  public static function insertIplocationTable() {
+  public static function insertIplocationTable($ipAddress, $latitude, $longitude) {
     $new_iplocation = new Iplocation;
-    $new_iplocation->ipaddress = '192.168.1.1';
-    $new_iplocation->latitude = 123.5;
-    $new_iplocation->longitude = 234.5;
+    $new_iplocation->ipaddress = $ipAddress;
+    $new_iplocation->latitude = $latitude;
+    $new_iplocation->longitude = $longitude;
 
     $new_iplocation->save();
     return true;
@@ -43,6 +43,8 @@ class WeatherForecast {
     // Request : {$ipaddress, $startDate, $forecastService}
     // Get `latitude` and `longitude` with $ipAddress
     list($latitude, $longitude) = $this->getLocation($ipAddress);
+    // Insert location information to database
+    $this->insertIplocationTable($ipAddress, $latitude, $longitude);
 
     // when user does not select date, it is defined as the current date.
     if ($startDate === null)
