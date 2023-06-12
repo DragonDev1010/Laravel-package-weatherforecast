@@ -6,7 +6,8 @@ use Great\Weatherforecast\Models\Iplocation;
 
 class WeatherForecast {
   public static function index() {
-    return view('weatherforecast::index');
+    $initialIpAddress = '192.168.1.91';
+    return view('weatherforecast::index', compact('initialIpAddress'));
   }
   public static function getLocation($ipAddress) {
     $apiKey = config('weatherForecast.api_key');
