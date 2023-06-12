@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Http;
 use Great\Weatherforecast\Models\Iplocation;
 
 class WeatherForecast {
+  public static function index() {
+    return view('weatherforecast::index');
+  }
   public static function getLocation($ipAddress) {
     $apiKey = config('weatherForecast.api_key');
     $lang = "en";
