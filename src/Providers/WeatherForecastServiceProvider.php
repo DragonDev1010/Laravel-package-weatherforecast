@@ -3,6 +3,7 @@
 namespace Great\Weatherforecast\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Great\Weatherforecast\Commands\GetLocationCommand;
 
 class WeatherForecastServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,7 @@ class WeatherForecastServiceProvider extends ServiceProvider
       $this->loadViewsFrom(__DIR__.'/../views', 'weatherforecast');
       if ($this->app->runningInConsole()) {
           $this->publishResources();
+          $this->commands([GetLocationCommand::class]);
       }
   }
 
