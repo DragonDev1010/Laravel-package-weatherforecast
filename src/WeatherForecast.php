@@ -41,7 +41,7 @@ class WeatherForecast {
     $server = $request->input('server');
     // Request : {$ipaddress, $startDate, $forecastService}
     // Get `latitude` and `longitude` with $ipAddress
-    list($latitude, $longitude) = $this->getLocationByIp($ipAddress);
+    list($latitude, $longitude) = $this->getLocation($ipAddress);
 
     // when user does not select date, it is defined as the current date.
     if ($startDate === null)
