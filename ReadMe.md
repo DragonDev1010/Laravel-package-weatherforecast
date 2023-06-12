@@ -1,1 +1,2 @@
 - `php artisan vendor:publish --tag=weatherforecast-config`
+- npm install chart.js

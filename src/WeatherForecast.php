@@ -61,7 +61,12 @@ class WeatherForecast {
         $url = 'https://api.open-meteo.com/v1/gfs?latitude='.$latitude.'&longitude='.$longitude.'&hourly=temperature_2m&start_date='.$startDate.'&end_date='.$endDate;
         break;
     }
-    return $this->_getWeather($url);
+    $forecastData = $this->_getWeather($url);
+    return view('weatherforecast::index', [
+      'initialIpAddress' => $ipAddress,
+      'forecastData' => $forecastData,
+      'server' => $server
+    ]);
   }
 
   private function _getWeather($url) {

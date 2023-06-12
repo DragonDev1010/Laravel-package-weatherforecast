@@ -27,6 +27,10 @@ class WeatherForecastServiceProvider extends ServiceProvider
       $this->publishes([
           __DIR__.'/../config/weatherForecast.php' => config_path('weatherForecast.php'),
       ], 'weatherforecast-config');
+
+      $this->publishes([
+          __DIR__.'/../assets/' => resource_path('weatherforecast'),
+      ], 'assets');
   }
 
 }
