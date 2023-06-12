@@ -12,6 +12,6 @@ class GetLocationCommand extends Command {
     $ipAddress = $this->argument('ipaddress');
     $weatherForecast = new WeatherForecast();
     $location = $weatherForecast->getLocation($ipAddress);
-    $this->info('Latitude: '.$location->latitude.' Longitude: '.$location->longitude);
+    $this->info('Latitude: '.$location[0].' Longitude: '.$location[1]);
   }
 }
