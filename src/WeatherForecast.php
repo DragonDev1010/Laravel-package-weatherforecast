@@ -3,6 +3,7 @@
 namespace Great\Weatherforecast;
 use Illuminate\Support\Facades\Http;
 use Great\Weatherforecast\Models\Iplocation;
+use Illuminate\Http\Request;
 
 class WeatherForecast {
   public static function index() {
@@ -34,7 +35,10 @@ class WeatherForecast {
     return true;
   }
 
-  public function getWeatherForecast($ipAddress, $startDate, $server) {
+  public function getWeatherForecast(Request $request) {
+    $ipAddress = $request->input('ip_address');
+    $startDate = $request->input('datetime');
+    $server = $request->input('server');
     // Request : {$ipaddress, $startDate, $forecastService}
     // Get `latitude` and `longitude` with $ipAddress
     list($latitude, $longitude) = $this->getLocationByIp($ipAddress);
