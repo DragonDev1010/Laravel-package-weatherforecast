@@ -21,10 +21,11 @@
 
   <button type="submit">Submit</button>
 </form>
-@isset($location_info)
-<p>{{$location_info}}</p>
-@else
-<p>no location data</p>
+@isset($latitude)
+<p>Latitude: {{$latitude}}</p>
+@endisset
+@isset($longitude)
+<p>Longitude: {{$longitude}}</p>
 @endisset
 @isset($forecastData)
   <!-- Your code for rendering the forecast data -->

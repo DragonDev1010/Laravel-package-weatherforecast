@@ -66,6 +66,8 @@ class WeatherForecast {
     $forecastData = $this->_getWeather($url);
     return view('weatherforecast::index', [
       'initialIpAddress' => $ipAddress,
+      'latitude' => $latitude,
+      'longitude' => $longitude,
       'forecastData' => $forecastData,
       'server' => $server
     ]);
