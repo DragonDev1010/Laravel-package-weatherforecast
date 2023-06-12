@@ -24,7 +24,7 @@
 
 @isset($forecastData)
   <!-- Your code for rendering the forecast data -->
-  <script type="module" src="{{ mix('packages/great/weather-forecast/src/assets/js/charts.js') }}"></script>
+  <script type="module" src="{{ asset('weatherforecast/js/charts.js') }}"></script>
 
   <!-- Store forecast array data to use in js file -->
   <div id="forecast-data" data-forecast="{{ json_encode($forecastData) }}"></div>
