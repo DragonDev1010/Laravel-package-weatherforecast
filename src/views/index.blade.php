@@ -1,4 +1,4 @@
-<form action="{{ route('get-weather-forecast') }}" method="POST">
+<form action="{{ route('getWeatherForecast') }}" method="POST">
   @csrf
 
   <div>
