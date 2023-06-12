@@ -21,7 +21,11 @@
 
   <button type="submit">Submit</button>
 </form>
-
+@isset($location_info)
+<p>{{$location_info}}</p>
+@else
+<p>no location data</p>
+@endisset
 @isset($forecastData)
   <!-- Your code for rendering the forecast data -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
