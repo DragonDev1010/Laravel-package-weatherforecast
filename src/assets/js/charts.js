@@ -1,5 +1,3 @@
-import Chart from 'chart.js/auto';
-
 document.addEventListener('DOMContentLoaded', function() {
   var forecastDataElement = document.getElementById('forecast-data');
   var forecastData = JSON.parse(forecastDataElement.getAttribute('data-forecast'));

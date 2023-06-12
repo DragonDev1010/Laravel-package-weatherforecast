@@ -24,6 +24,8 @@
 
 @isset($forecastData)
   <!-- Your code for rendering the forecast data -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="{{ asset('weatherforecast/js/charts.js') }}"></script>
 
   <!-- Store forecast array data to use in js file -->
