@@ -19,7 +19,7 @@
     </select>
   </div>
 
-  <button type="submit">Submit</button>
+  <button type="submit">Weather Forecast</button>
 </form>
 @isset($latitude)
 <p>Latitude: {{$latitude}}</p>
@@ -42,7 +42,7 @@
   </div>
 @else
   <!-- Your code for handling the case when forecast data is not available -->
-  <p>no forecast data</p>
+  <p>There is not any forecasting data.</p>
 @endisset
 
 

@@ -58,9 +58,12 @@ class WeatherForecast {
         // Get forecast api url with $latitude, $longitude, $startDate, $endDate
         $url = 'https://api.open-meteo.com/v1/dwd-icon?latitude='.$latitude.'&longitude='.$longitude.'&hourly=temperature_2m&start_date='.$startDate.'&end_date='.$endDate;
         break;
+      
+      case 'noaa-gfs':
+        $url = 'https://api.open-meteo.com/v1/gfs?latitude='.$latitude.'&longitude='.$longitude.'&hourly=temperature_2m&start_date='.$startDate.'&end_date='.$endDate;
+        break;
         
       default:
-        $url = 'https://api.open-meteo.com/v1/gfs?latitude='.$latitude.'&longitude='.$longitude.'&hourly=temperature_2m&start_date='.$startDate.'&end_date='.$endDate;
         break;
     }
     $forecastData = $this->_getWeather($url);
