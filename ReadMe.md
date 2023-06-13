@@ -32,3 +32,6 @@
       php artisan vendor:publish --tag=assets
       php artisan migrate
       ```
+
+3. CLI Command
+  On the command prompt, find the project's root path and run this command - `php artisan get-location {ipaddress}`.
