@@ -28,6 +28,7 @@
       ```
       composer update
       php artisan vendor:publish --tag=iplocation-migrations
+      php artisan vendor:publish --tag=forecast-migrations
       php artisan vendor:publish --tag=weatherforecast-config
       php artisan vendor:publish --tag=assets
       php artisan migrate
