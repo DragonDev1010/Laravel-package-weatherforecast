@@ -21,10 +21,14 @@ class WeatherForecastServiceProvider extends ServiceProvider
 
   protected function publishResources()
   {
-      // $  php artisan vendor:publish --tag=randomable-migrations
+      // $  php artisan vendor:publish --tag=iplocation-migrations
       $this->publishes([
           __DIR__ . '/../database/migrations/create_iplocation_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_iplocation_table.php'),
       ], 'iplocation-migrations');
+
+      $this->publishes([
+          __DIR__ . '/../database/migrations/create_forecast_table.php' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_forecast_table.php'),
+      ], 'forecast-migrations');
 
       $this->publishes([
           __DIR__.'/../config/weatherForecast.php' => config_path('weatherForecast.php'),
